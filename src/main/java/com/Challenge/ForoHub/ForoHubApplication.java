@@ -7,7 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ForoHubApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ForoHubApplication.class, args);
+//		SpringApplication.run(ForoHubApplication.class, args);
+		System.out.println("Siuuuu MR.INCREIBLE");
 	}
 
 }
