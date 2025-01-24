@@ -1,6 +1,7 @@
 package com.Challenge.ForoHub.Models;
 
 //import com.Challenge.ForoHub.Dtos.Topico.CrearTopicoDto;
+import com.Challenge.ForoHub.Dtos.Topico.CrearTopicoDto;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -73,4 +74,18 @@ public class Topico {
 //        this.autor = crearTopicoDto.autor();
 //        this.curso = crearTopicoDto.curso();
 //    }
+
+
+    // Método estático para convertir DTO a entidad
+    public static Topico toEntity(CrearTopicoDto dto) {
+        return new Topico(
+                null, // ID autogenerado
+                dto.titulo(),
+                dto.mensaje(),
+                LocalDateTime.now(), // Fecha actual
+                Estado.ABIERTO, // Estado inicial
+                dto.autor(),
+                dto.curso()
+        );
+    }
 }
